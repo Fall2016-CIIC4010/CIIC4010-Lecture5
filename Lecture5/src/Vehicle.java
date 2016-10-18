@@ -15,8 +15,7 @@ public abstract class Vehicle {
 
 	private int horizontalSpeed = 0;  // Car speed in pixels per second
 	private int horizontalDirection;
-
-
+	
 	public Color getColor() {
 		return this.color;
 	}
@@ -39,6 +38,8 @@ public abstract class Vehicle {
 	public int getNumber() {
 		return number;
 	}
+	
+	public abstract int getHeight();
 
 	public void setPosition(double xPos, double yPos) {
 		this.xPos = xPos;
