@@ -10,7 +10,7 @@ public class CarStage extends JComponent {
 
 	static int counter = 0;
 
-	Vehicle[] vehicles;
+	Raceable[] raceables;
 
 	boolean onAWall = false;
 
@@ -18,12 +18,12 @@ public class CarStage extends JComponent {
 
 	Random randomNumbers = new Random();
 
-	public CarStage(int frameHeight, Vehicle[] vehicles) {
-		this.vehicles = new Vehicle[vehicles.length];
+	public CarStage(int frameHeight, Raceable[] vehicles) {
+		this.raceables = new Raceable[vehicles.length];
 		int nextYPos = 0;
 		for (int i=0; i < vehicles.length; i++) {
 			vehicles[i].setPosition(0, nextYPos);
-			this.vehicles[i] = vehicles[i];
+			this.raceables[i] = vehicles[i];
 			nextYPos += vehicles[i].getHeight() + 20;
 		}
 	}
@@ -32,7 +32,7 @@ public class CarStage extends JComponent {
 
 	public void paintComponent (Graphics g) {
 
-		for (Vehicle vehicle : vehicles) {
+		for (Raceable vehicle : raceables) {
 			vehicle.draw(g);
 			int deltaxCar = randomNumbers.nextInt(vehicle.getHorizontalSpeed());
 			vehicle.moveInX(deltaxCar);

@@ -12,21 +12,21 @@ public class MyMain
 		final int FRAME_WIDTH = 400;
 		final int FRAME_HEIGHT = 400;
 		
-		Vehicle[] theVehicles = new Vehicle[10];
+		Raceable[] theRaceables = new Raceable[10];
 		int nextYPos = 0;
-		for (int i=0; i < theVehicles.length; i++) {
+		for (int i=0; i < theRaceables.length; i++) {
 			if (i==0) {
-				theVehicles[i] = new PoliceCar(0, 0, Color.BLUE, 10, 1, i); 
+				theRaceables[i] = new PoliceCar(0, 0, Color.BLUE, 10, 1, i); 
 			}
 			else if (i % 2 == 0) {
-				theVehicles[i] = new Truck(0, 0, Color.BLUE, 10, 1, i); 
+				theRaceables[i] = new Truck(0, 0, Color.BLUE, 10, 1, i); 
 			}
 			else {
-				theVehicles[i] = new MutableCar(0, 0, Color.BLUE, 10, 1, i); 
+				theRaceables[i] = new MutableCar(0, 0, Color.BLUE, 10, 1, i); 
 			}
 		}
 		
-		CarStage theComponent = new CarStage(FRAME_HEIGHT, theVehicles);
+		CarStage theComponent = new CarStage(FRAME_HEIGHT, theRaceables);
 		
 		frame.add(theComponent);
 		

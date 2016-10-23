@@ -6,7 +6,7 @@ import java.awt.geom.Ellipse2D;
 import java.awt.geom.Line2D;
 import java.awt.geom.Point2D;
 
-public abstract class Vehicle {
+public abstract class Vehicle implements Raceable{
 
 	private double xPos = 0;
 	private double yPos = 0;
