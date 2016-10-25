@@ -23,6 +23,7 @@ public abstract class Vehicle implements Raceable{
 	public double getXPos() {
 		return this.xPos;
 	}
+	
 	public double getYPos() {
 		return this.yPos;
 	}
@@ -41,6 +42,8 @@ public abstract class Vehicle implements Raceable{
 	
 	public abstract int getHeight();
 
+	public abstract int getWidth();
+	
 	public void setPosition(double xPos, double yPos) {
 		this.xPos = xPos;
 		this.yPos = yPos;

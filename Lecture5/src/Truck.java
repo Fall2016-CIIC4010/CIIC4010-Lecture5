@@ -19,6 +19,10 @@ public class Truck extends Vehicle {
 	public int getHeight() {
 		return 40;
 	}
+	
+	public int getWidth() {
+		return 60;
+	}
 
 	public void draw(Graphics g) {
 		

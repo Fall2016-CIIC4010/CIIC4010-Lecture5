@@ -12,11 +12,16 @@ public class MyMain
 		final int FRAME_WIDTH = 400;
 		final int FRAME_HEIGHT = 400;
 		
-		Raceable[] theRaceables = new Raceable[10];
+		final int NUMBER_OF_RACERS = 10;
+		
+		Raceable[] theRaceables = new Raceable[NUMBER_OF_RACERS];
 		int nextYPos = 0;
 		for (int i=0; i < theRaceables.length; i++) {
 			if (i==0) {
 				theRaceables[i] = new PoliceCar(0, 0, Color.BLUE, 10, 1, i); 
+			}
+			else if ((i == NUMBER_OF_RACERS - 1) || (i == NUMBER_OF_RACERS - 2)) {
+				theRaceables[i] = new Rabbit(0, 0, Color.BLUE, 10, 1, i); 
 			}
 			else if (i % 2 == 0) {
 				theRaceables[i] = new Truck(0, 0, Color.BLUE, 10, 1, i); 

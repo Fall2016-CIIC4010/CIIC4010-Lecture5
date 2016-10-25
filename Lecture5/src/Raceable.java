@@ -10,6 +10,7 @@ public interface Raceable {
 	public int getHorizontalDirection();
 	public int getNumber();
 	public int getHeight();
+	public int getWidth();
 	public void setPosition(double xPos, double yPos);
 	public void setColor(Color color);
 	public void setHorizontalSpeed(int horizontalSpeed);
